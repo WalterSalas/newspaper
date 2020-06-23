@@ -1,0 +1,29 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: "header header header" "aside-right main aside-left";
+}
+
+.header {
+    background-color: blue;
+    grid-area: header;
+}
+
+.aside-right {
+    height: 100%;
+    background-color: blueviolet;
+    grid-area: aside-right;
+}
+
+.main {
+    height: 100%;
+    background-color: chartreuse;
+    grid-area: main;
+}
+
+.aside-left {
+    height: 100%;
+    background-color: chocolate;
+    grid-area: aside-left;
+}
