@@ -1,29 +1,91 @@
-.grid-container {
+* {
+    border: solid 1px red;
+    padding: 0px;
+    margin: 0px;
+}
+
+.web-container {
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 1fr 5fr;
-    grid-template-areas: "header header header" "aside-right main aside-left";
+    grid-template-areas: "header header header" "aside-left main aside-right";
 }
 
 .header {
-    background-color: blue;
+    display: grid;
+    height: 240px;
+    background-color: darkblue;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 3fr 1fr 1fr;
     grid-area: header;
+    grid-template-areas: "main-header main-header main-header" "movie-ratings movie-ratings movie-ratings" "nav-bar nav-bar nav-bar";
 }
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    background-color: darkcyan;
+    height: 120px;
+    grid-area: main-header;
+}
+
+.nav-bar {
+    background-color: darkgoldenrod;
+    grid-area: nav-bar;
+    height: 60px;
+}
+
+.nav-bar ul li{
+    display: inline;
+}
+
+.movie-ratings {
+    background-color: darkkhaki;
+    height: 60px;
+    grid-area: movie-ratings;
+}
+
+
 
 .aside-right {
     height: 100%;
     background-color: blueviolet;
     grid-area: aside-right;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1fr 1fr 1.5fr;
+    gap: 0px 0px;
 }
 
 .main {
     height: 100%;
     background-color: chartreuse;
     grid-area: main;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+    gap: 0px 10px;
 }
 
 .aside-left {
     height: 100%;
     background-color: chocolate;
     grid-area: aside-left;
+    height: 100%;
+    width: 100%;
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 0.5fr;
+    gap: 0px 10px;
 }
+
